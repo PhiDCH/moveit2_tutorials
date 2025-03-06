@@ -35,6 +35,7 @@ Follow the [MoveIt 2 Source Build](https://moveit.ros.org/install-moveit2/source
 
 Open a command line to your your moveit2 colcon workspace:
 
+    sudo apt install ros-humble-launch-param-builder ros-humble-srdfdom ros-humble-moveit-ros-perception
     cd $COLCON_WS/src
 
 Download the MoveIt Tutorials source code:
@@ -46,7 +47,7 @@ Download the MoveIt Tutorials source code:
 Configure and build the workspace:
 
     cd $COLCON_WS
-    colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
+    colcon build --mixin release
 
 ## Build HTML Pages Locally
 
